@@ -50,7 +50,49 @@ favstats(alcohol~Seat,data=davisdata)
 
 The numerical data shows that the people in the back are consuming more alcohol that the people in front and middle row. The data show the highest median are the people in the back row with 4, then the people in the middle row with 1 and least is the front row at 0
 The back row have the most people of 83 then front row is 33 and the back row is 32, which these data are show under the letter "n".
+
+
 ## Inferential Tests
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+```{r}
+# Load the necessary library
+library(stats)
+
+# Perform ANOVA test
+anova_result <- aov(alcohol ~ Seat, data = davisdata)
+
+# check the ANOVA table
+summary(anova_result)
+
+
+```
+
+
+
+```{r}
+
+# Perform Tukey's HSD test
+tukey_result <- TukeyHSD(anova_result)
+
+# Print the pairwise comparisons
+print(tukey_result)
+
+```
+
+
+
+
+
+
 
 ## Conclusions
 
