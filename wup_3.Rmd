@@ -91,3 +91,5 @@ print(tukey_result)
 
 ## Conclusion
 
+The numerical data shows that the people the back row consume more alcohol where the middle and front was less. The inferential test shows the vaule for model1 turkey and anova table result value is 9.656 for seats. 
+
